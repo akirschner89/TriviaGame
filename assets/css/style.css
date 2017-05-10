@@ -1,0 +1,52 @@
+* {
+	box-sizing: border-box;
+	text-align: center;
+}
+
+body {
+	background-image: url(../images/spurs_wallpaper.jpg);
+	margin-left: 20%;
+}
+
+#wrapper {
+	background-image: url(../images/duncan_background.jpg);
+	margin: 5%;
+	border: 10px black solid;
+	max-height: 60%;
+	max-width: 70%;
+	height: 600px;
+	width: 960px;
+}
+
+h1 {
+	color: white;
+	font-family: 'Kanit', sans-serif;
+	font-size: 5.5em;
+	margin-bottom: 10%;
+	text-shadow: 5px 5px #4effdf;
+	border: 10px #ff9e43 solid;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+h1:hover { 
+	background: grey;
+}
+
+
+button {
+	padding-top: 5%;
+	padding-bottom: 5%;
+    font-size: -webkit-xxx-large;
+    border: 2px #4effdf solid;
+    color: #ff9e43;
+    background: black;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+button:hover { 
+	background: white;
+}
+
+

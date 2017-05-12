@@ -5,11 +5,15 @@
 
 body {
 	background-image: url(../images/spurs_wallpaper.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 	margin-left: 20%;
 }
 
 #wrapper {
 	background-image: url(../images/duncan_background.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 	margin: 5%;
 	border: 10px black solid;
 	max-height: 60%;
@@ -22,16 +26,11 @@ h1 {
 	color: white;
 	font-family: 'Kanit', sans-serif;
 	font-size: 5.5em;
-	margin-bottom: 10%;
 	text-shadow: 5px 5px #4effdf;
 	border: 10px #ff9e43 solid;
-	margin-left: 5%;
-	margin-right: 5%;
+	margin: 0% 5% 10% 5%;
 }
 
-h1:hover { 
-	background: grey;
-}
 
 
 button {
@@ -49,4 +48,15 @@ button:hover {
 	background: white;
 }
 
+div p {
+	font-family: 'Kanit', sans-serif;
+	color: #4effdf;
+	font-size: 2em;
+	text-shadow: 5px 5px black;
+	margin-top: -3% ;
+}
+
+button p {
+	padding: 0px;
+}
 

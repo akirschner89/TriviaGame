@@ -56,7 +56,12 @@ div p {
 	margin-top: -3% ;
 }
 
-button p {
-	padding: 0px;
+.gameTimeAs {
+	padding-top: 0%;
+	padding-bottom: 0%;
+	margin-top: 0%;
+    margin-right: 5%;
 }
+
+
 

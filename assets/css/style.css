@@ -15,6 +15,7 @@ body {
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	margin: 5%;
+	margin-bottom: 5px;
 	border: 10px black solid;
 	max-height: 60%;
 	max-width: 70%;
@@ -28,10 +29,12 @@ h1 {
 	font-size: 5.5em;
 	text-shadow: 5px 5px #4effdf;
 	border: 10px #ff9e43 solid;
-	margin: 0% 5% 10% 5%;
+	margin: 0% 5% 5% 5%;
 }
 
-
+#gameContainer {
+	margin-top: 20px;
+}
 
 button {
 	padding-top: 5%;
@@ -56,11 +59,11 @@ div p {
 	margin-top: -3% ;
 }
 
-.gameTimeAs {
+.gameTimeAnswers {
 	padding-top: 0%;
 	padding-bottom: 0%;
 	margin-top: 0%;
-    margin-right: 5%;
+    margin-right: 4%;
 }
 
 

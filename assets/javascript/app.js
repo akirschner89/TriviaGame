@@ -50,11 +50,32 @@ $(document).ready(function() {
             gif: "assets/images/kawhi_giphy.gif",
         },
 
-         {
+        {
             question: "How many PPG did Robinson average his rookie year?",
             answers: ["25.2", "24.7", "24.3", "23.8"],
             correctAnswer: "24.3",
             gif: "assets/images/david_giphy.gif",
+        },
+
+        {
+            question: "Who is Tony Parker's ex-wife?",
+            answers: ["Eva Longoria", "Victoria Beckham", "Halle Berry", "Jessica Alba"],
+            correctAnswer: "Eva Longoria",
+            gif: "assets/images/tony_giphy.gif",
+        },
+
+         {
+            question: "What were the Spurs called before moving to San Antonio?",
+            answers: ["Braves", "Chaparrals", "Voyagers", "Corporals"],
+            correctAnswer: "Chaparrals",
+            gif: "assets/images/pump_giphy.gif",
+        },
+
+         {
+            question: "Out of these ex-Spurs, who never coached in the NBA??",
+            answers: ["Avery Johnson", "Steve Kerr", "Monty Williams", "Stephen Jackson"],
+            correctAnswer: "Stephen Jackson",
+            gif: "assets/images/hug_giphy.gif",
         },
 
     ];
@@ -476,7 +497,7 @@ function setGame7() {
                
                 $("#gameContainer").html("<div><p>NOW THAT'S A SLAM DUNK!!!</p></div>");
                 $("#gameContainer").append("<img src=" + questions[6].gif + ">");
-                setTimeout(endGame, 4000);
+                setTimeout(setGame8, 4000);
 
             } else {
                 wrong++;
@@ -486,7 +507,7 @@ function setGame7() {
                 $("#gameContainer").html("<div><p>We call that an AIRBALL!!!</p></div>");
                  $("#gameContainer").append("<div><p>The correct answer is: " + questions[6].correctAnswer + "</p></div>");
                 $("#gameContainer").append("<img src=" + questions[6].gif + ">");
-                setTimeout(endGame, 4000);
+                setTimeout(setGame8, 4000);
             };
         });
 
@@ -499,10 +520,188 @@ function setGame7() {
            
             $("#gameContainer").html("<div><p>LOOKS LIKE THE SHOT CLOCK EXPIRED!!!</p></div>");
             $("#gameContainer").append("<img src=" + questions[6].gif + ">");
+            setTimeout(setGame8, 4000);
+        }
+    };
+};
+
+function setGame8() {
+
+    	shotClock = 30;
+    	$("#timerContainer").html("<div><p>Shot Clock: " + shotClock + "</p></div>");
+
+        intervalId = setInterval(function() {
+        
+        	shotClock--;
+     
+        	$("#timerContainer").html("<div><p>Shot Clock: " + shotClock + "</p></div>");
+        
+            console.log("Shot Clock: " + shotClock);
+            clockCheck();
+        }, 1000);
+
+        $("#gameContainer").html("<div><p>" + questions[7].question + "</p></div>");
+
+            for (var i = 0; i < 4; i++) {
+                button = $("<button>");
+                button.addClass("gameTimeAnswers");
+                button.attr("data-name", questions[7].answers[i]);
+                button.text(questions[7].answers[i]);
+                $("#gameContainer").append(button);
+            };
+
+        $(".gameTimeAnswers").on("click", function checkAnswer() {
+            if ($(this).attr("data-name") === questions[7].correctAnswer) {
+                correct++;
+                console.log("Wins: " + correct);
+                clearInterval(intervalId);
+               
+                $("#gameContainer").html("<div><p>NOW THAT'S A SLAM DUNK!!!</p></div>");
+                $("#gameContainer").append("<img src=" + questions[7].gif + ">");
+                setTimeout(setGame9, 4000);
+
+            } else {
+                wrong++;
+                console.log("Losses: " + wrong);
+                clearInterval(intervalId);
+                $("#gameContainer").html("<div><p>We call that an AIRBALL!!!</p></div>");
+                 $("#gameContainer").append("<div><p>The correct answer is: " + questions[7].correctAnswer + "</p></div>");
+                $("#gameContainer").append("<img src=" + questions[7].gif + ">");
+                setTimeout(setGame9, 4000);
+            };
+        });
+
+
+    function clockCheck() {
+        if (shotClock === 0) {
+            unanswered += 1;
+            console.log("Unanswered: " + unanswered);
+            clearInterval(intervalId);
+            $("#gameContainer").html("<div><p>LOOKS LIKE THE SHOT CLOCK EXPIRED!!!</p></div>");
+            $("#gameContainer").append("<img src=" + questions[8].gif + ">");
+            setTimeout(setGame9, 4000);
+        }
+    };
+};
+
+function setGame9() {
+
+    	shotClock = 30;
+    	$("#timerContainer").html("<div><p>Shot Clock: " + shotClock + "</p></div>");
+
+        intervalId = setInterval(function() {
+        
+        	shotClock--;
+     
+        	$("#timerContainer").html("<div><p>Shot Clock: " + shotClock + "</p></div>");
+        
+            console.log("Shot Clock: " + shotClock);
+            clockCheck();
+        }, 1000);
+
+        $("#gameContainer").html("<div><p>" + questions[8].question + "</p></div>");
+
+            for (var i = 0; i < 4; i++) {
+                button = $("<button>");
+                button.addClass("gameTimeAnswers");
+                button.attr("data-name", questions[8].answers[i]);
+                button.text(questions[8].answers[i]);
+                $("#gameContainer").append(button);
+            };
+
+        $(".gameTimeAnswers").on("click", function checkAnswer() {
+            if ($(this).attr("data-name") === questions[8].correctAnswer) {
+                correct++;
+                console.log("Wins: " + correct);
+                clearInterval(intervalId);
+               
+                $("#gameContainer").html("<div><p>NOW THAT'S A SLAM DUNK!!!</p></div>");
+                $("#gameContainer").append("<img src=" + questions[8].gif + ">");
+                setTimeout(setGame10, 4000);
+
+            } else {
+                wrong++;
+                console.log("Losses: " + wrong);
+                clearInterval(intervalId);
+                $("#gameContainer").html("<div><p>We call that an AIRBALL!!!</p></div>");
+                 $("#gameContainer").append("<div><p>The correct answer is: " + questions[8].correctAnswer + "</p></div>");
+                $("#gameContainer").append("<img src=" + questions[8].gif + ">");
+                setTimeout(setGame10, 4000);
+            };
+        });
+
+
+    function clockCheck() {
+        if (shotClock === 0) {
+            unanswered += 1;
+            console.log("Unanswered: " + unanswered);
+            clearInterval(intervalId);
+            $("#gameContainer").html("<div><p>LOOKS LIKE THE SHOT CLOCK EXPIRED!!!</p></div>");
+            $("#gameContainer").append("<img src=" + questions[8].gif + ">");
+            setTimeout(setGame10, 4000);
+        }
+    };
+};
+
+function setGame10() {
+
+    	shotClock = 30;
+    	$("#timerContainer").html("<div><p>Shot Clock: " + shotClock + "</p></div>");
+
+        intervalId = setInterval(function() {
+        
+        	shotClock--;
+     
+        	$("#timerContainer").html("<div><p>Shot Clock: " + shotClock + "</p></div>");
+        
+            console.log("Shot Clock: " + shotClock);
+            clockCheck();
+        }, 1000);
+
+        $("#gameContainer").html("<div><p>" + questions[9].question + "</p></div>");
+
+            for (var i = 0; i < 4; i++) {
+                button = $("<button>");
+                button.addClass("gameTimeAnswers");
+                button.attr("data-name", questions[9].answers[i]);
+                button.text(questions[9].answers[i]);
+                $("#gameContainer").append(button);
+            };
+
+        $(".gameTimeAnswers").on("click", function checkAnswer() {
+            if ($(this).attr("data-name") === questions[9].correctAnswer) {
+                correct++;
+                console.log("Wins: " + correct);
+                clearInterval(intervalId);
+               
+                $("#gameContainer").html("<div><p>NOW THAT'S A SLAM DUNK!!!</p></div>");
+                $("#gameContainer").append("<img src=" + questions[9].gif + ">");
+                setTimeout(endGame, 4000);
+
+            } else {
+                wrong++;
+                console.log("Losses: " + wrong);
+                clearInterval(intervalId);
+                $("#gameContainer").html("<div><p>We call that an AIRBALL!!!</p></div>");
+                 $("#gameContainer").append("<div><p>The correct answer is: " + questions[9].correctAnswer + "</p></div>");
+                $("#gameContainer").append("<img src=" + questions[9].gif + ">");
+                setTimeout(endGame, 4000);
+            };
+        });
+
+
+    function clockCheck() {
+        if (shotClock === 0) {
+            unanswered += 1;
+            console.log("Unanswered: " + unanswered);
+            clearInterval(intervalId);
+            $("#gameContainer").html("<div><p>LOOKS LIKE THE SHOT CLOCK EXPIRED!!!</p></div>");
+            $("#gameContainer").append("<img src=" + questions[9].gif + ">");
             setTimeout(endGame, 4000);
         }
     };
 };
+
 
 function endGame() {
 	button.addClass("startOver");

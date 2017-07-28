@@ -1,2 +1,3 @@
 # TriviaGame
-HW6
+
+Spurs-themed Javascript + jQuery trivia game

@@ -1,12 +1,16 @@
 * {
 	box-sizing: border-box;
 	text-align: center;
+	margin: 0;
+	padding; 0;
+	max-height: 100%;
+	max-width: 100%;
 }
 
 body {
 	background-image: url(../images/spurs_wallpaper.jpg);
 	background-repeat: no-repeat;
-	background-size: 100% 100%;
+	background-size: cover;
 	margin-left: 20%;
 }
 
@@ -17,7 +21,7 @@ body {
 	margin: 5%;
 	margin-bottom: 5px;
 	border: 10px black solid;
-	max-height: 60%;
+	max-height: 100%;
 	max-width: 70%;
 	height: 600px;
 	width: 960px;
@@ -63,7 +67,11 @@ div p {
 	padding-top: 0%;
 	padding-bottom: 0%;
 	margin-top: 0%;
-    margin-right: 4%;
+	margin-right: 4%;
+	max-width: 90%;
+	width: 100%;
+	max-height: 70%;
+	height: 100%;
 }
 
 
